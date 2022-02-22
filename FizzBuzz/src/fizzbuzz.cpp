@@ -5,6 +5,7 @@
 //
 #include <iostream>
 #include <string>
+#include <unordered_map>
 
 #include "fizzbuzz.h"
 
@@ -29,6 +30,26 @@ void FizzBuzz(int count) {
         }
 
         std::cout << string_out << std::endl;
+    }
+}
+
+void FizzBuzzHashMap(int count) {
+    std::string string_out;
+    std::unordered_map<unsigned int, std::string> fizzbuzz_map = {
+            {3, "Fizz"},
+            {5, "Buzz"}
+    };
+
+    for (unsigned int i = 1; i < count; ++i) {
+        string_out = "";
+
+        for (auto const& fizzbuzz_item : fizzbuzz_map) {
+            if (i % fizzbuzz_item.first == 0) {
+                string_out += fizzbuzz_item.second;
+            }
+        }
+
+        std::cout << (string_out.empty() ? std::to_string(i) : string_out) << std::endl;
     }
 }
 
