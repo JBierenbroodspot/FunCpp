@@ -4,6 +4,7 @@
 // Created by jim12 on 22/02/2022.
 //
 #include <iostream>
+#include <string>
 
 #include "fizzbuzz.h"
 
