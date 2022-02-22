@@ -12,9 +12,10 @@ namespace trees {
 
 class TreeBase {
 private:
-    unsigned int width;
-    unsigned int height;
+    unsigned int width = 0;
+    unsigned int height = 0;
 public:
+    TreeBase();
     void build();
 };
 
