@@ -3,5 +3,8 @@
 //
 // Created by jim12 on 22/02/2022.
 //
+#include "fizzbuzz.h"
 
-int main() {}
+int main() {
+    fizzbuzz::FizzBuzz(15);
+}
