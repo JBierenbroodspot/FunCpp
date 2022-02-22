@@ -11,7 +11,7 @@
 
 namespace fizzbuzz {
 
-void FizzBuzz(int count) {
+void FizzBuzz(unsigned int count) {
     std::string string_out;
 
     for (unsigned int i = 1; i <= count; i++) {
@@ -33,7 +33,7 @@ void FizzBuzz(int count) {
     }
 }
 
-void FizzBuzzHashMap(int count) {
+void FizzBuzzHashMap(unsigned int count) {
     std::string string_out;
     std::unordered_map<unsigned int, std::string> fizzbuzz_map = {
             {3, "Fizz"},

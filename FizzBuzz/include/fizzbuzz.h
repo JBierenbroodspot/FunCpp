@@ -9,8 +9,8 @@
 
 namespace fizzbuzz {
 
-void FizzBuzz(int count);
-void FizzBuzzHashMap(int count);
+void FizzBuzz(unsigned int count);
+void FizzBuzzHashMap(unsigned int count);
 
 } // namespace fizzbuzz
 
