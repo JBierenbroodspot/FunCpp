@@ -40,7 +40,7 @@ void FizzBuzzHashMap(int count) {
             {5, "Buzz"}
     };
 
-    for (unsigned int i = 1; i < count; ++i) {
+    for (unsigned int i = 1; i <= count; ++i) {
         string_out = "";
 
         for (auto const& fizzbuzz_item : fizzbuzz_map) {
