@@ -10,7 +10,7 @@
 namespace fizzbuzz {
 
 void FizzBuzz(unsigned int count);
-void FizzBuzzHashMap(unsigned int count);
+void FizzBuzzMap(unsigned int count);
 
 } // namespace fizzbuzz
 

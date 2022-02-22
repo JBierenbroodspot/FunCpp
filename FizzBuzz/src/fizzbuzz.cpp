@@ -5,7 +5,7 @@
 //
 #include <iostream>
 #include <string>
-#include <unordered_map>
+#include <map>
 
 #include "fizzbuzz.h"
 
@@ -33,9 +33,9 @@ void FizzBuzz(unsigned int count) {
     }
 }
 
-void FizzBuzzHashMap(unsigned int count) {
+void FizzBuzzMap(unsigned int count) {
     std::string string_out;
-    std::unordered_map<unsigned int, std::string> fizzbuzz_map = {
+    std::map<unsigned int, std::string> fizzbuzz_map = {
             {3, "Fizz"},
             {5, "Buzz"}
     };

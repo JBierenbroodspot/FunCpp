@@ -10,8 +10,8 @@
 int main() {
     unsigned int fizzbuzz_count = 15;
 
-    std::cout << "FizzBuzz to " << fizzbuzz_count << " w/o hashmap" << std::endl;
-    fizzbuzz::FizzBuzz(15);
-    std::cout << "FizzBuzz to " << fizzbuzz_count << " w/ hashmap" << std::endl;
-    fizzbuzz::FizzBuzzHashMap(15);
+    std::cout << "FizzBuzz to " << fizzbuzz_count << " w/o map" << std::endl;
+    fizzbuzz::FizzBuzz(fizzbuzz_count);
+    std::cout << "FizzBuzz to " << fizzbuzz_count << " w/ map" << std::endl;
+    fizzbuzz::FizzBuzzMap(fizzbuzz_count);
 }
