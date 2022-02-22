@@ -15,8 +15,8 @@ private:
     unsigned int width = 0;
     unsigned int height = 0;
 public:
-    TreeBase();
-    void build();
+    TreeBase(unsigned int width, unsigned int height);
+    void build(unsigned int max_base_width);
 };
 
 } // namespace trees
