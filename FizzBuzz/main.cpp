@@ -10,8 +10,8 @@
 int main() {
     unsigned int fizzbuzz_count = 15;
 
-    std::cout << std::format("FizzBuzz to {} w/o hashmap", fizzbuzz_count) << std::endl;
+    std::cout << "FizzBuzz to " << fizzbuzz_count << " w/o hashmap" << std::endl;
     fizzbuzz::FizzBuzz(15);
-    std::cout << std::format("FizzBuzz to {} w/ hashmap", fizzbuzz_count) << std::endl;
+    std::cout << "FizzBuzz to " << fizzbuzz_count << " w/ hashmap" << std::endl;
     fizzbuzz::FizzBuzzHashMap(15);
 }
