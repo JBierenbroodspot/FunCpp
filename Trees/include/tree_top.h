@@ -13,6 +13,8 @@ class TreeTop {
 private:
     unsigned int max_width;
     unsigned int max_height;
+public:
+    void build();
 };
 
 } // namespace trees

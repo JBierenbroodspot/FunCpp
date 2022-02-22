@@ -14,6 +14,8 @@ class TreeBase {
 private:
     unsigned int width;
     unsigned int height;
+public:
+    void build();
 };
 
 } // namespace trees
