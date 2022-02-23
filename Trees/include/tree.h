@@ -17,7 +17,7 @@ private:
     trees::TreeTop top;
     trees::TreeBase base;
 public:
-    Tree(trees::TreeTop top, trees::TreeBase base);
+    Tree(unsigned int base_width, unsigned int base_height, unsigned max_top_width);
     void build() const;
 };
 

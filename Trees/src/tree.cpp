@@ -8,8 +8,14 @@
 
 namespace trees {
 
-Tree::Tree(trees::TreeTop top, trees::TreeBase base) {}
+Tree::Tree(unsigned int base_width, unsigned int base_height, unsigned max_top_width):
+    top(trees::TreeTop(max_top_width)),
+    base(trees::TreeBase(base_width, base_height))
+{}
 
-void Tree::build() const {}
+void Tree::build() const {
+    this->top.build();
+    this->base.build(this->top.get_max_width());
+}
 
 } // namespace trees
