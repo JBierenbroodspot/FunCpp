@@ -15,7 +15,7 @@ private:
     unsigned int max_height;
 public:
     TreeTop(unsigned int max_width, unsigned int max_height);
-    void build();
+    void build() const;
 };
 
 } // namespace trees

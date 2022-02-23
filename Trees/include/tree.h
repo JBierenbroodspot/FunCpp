@@ -18,7 +18,7 @@ private:
     trees::TreeBase base;
 public:
     Tree(trees::TreeTop top, trees::TreeBase base);
-    void build();
+    void build() const;
 };
 
 } // namespace trees
