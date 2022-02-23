@@ -14,9 +14,10 @@ namespace trees {
 
 class Tree {
 private:
-    TreeTop top;
-    TreeBase base;
+    trees::TreeTop top;
+    trees::TreeBase base;
 public:
+    Tree(trees::TreeTop top, trees::TreeBase base);
     void build();
 };
 
