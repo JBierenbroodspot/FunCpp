@@ -18,10 +18,8 @@ TreeBase::TreeBase(unsigned int width, unsigned int height) {
 }
 
 void TreeBase::build(unsigned int max_base_width) const {
-    // If max base width is even the base of the tree must be offset to the left.
-    int base_offset = max_base_width % 2 == 0 ? 1 : 0;
     // The number of whitespace before the tree base is drawn.
-    auto buffer_count = static_cast<unsigned int>(floor((double)max_base_width / 2) - (base_offset));
+    auto buffer_count = static_cast<unsigned int>(floor((double)max_base_width / 2) - 1);
     // std::string has a fill constructor which fills the string with the first parameter amount of times with the
     // second parameter.
     std::string base_buffer(buffer_count, ' ');
