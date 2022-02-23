@@ -11,9 +11,8 @@
 
 namespace trees {
 
-TreeTop::TreeTop(unsigned int max_width, unsigned int max_height) {
+TreeTop::TreeTop(unsigned int max_width) {
     this->max_width = max_width;
-    this->max_height = max_height;
 }
 
 void TreeTop::build() const {
