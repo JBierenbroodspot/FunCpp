@@ -22,4 +22,8 @@ void TreeTop::build() const {
     }
 }
 
+unsigned int TreeTop::get_max_width() const {
+    return this->max_width;
+}
+
 } // namespace trees

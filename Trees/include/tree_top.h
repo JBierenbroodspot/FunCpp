@@ -15,6 +15,7 @@ private:
 public:
     explicit TreeTop(unsigned int max_width);
     void build() const;
+    [[nodiscard]] unsigned int get_max_width() const;
 };
 
 } // namespace trees
