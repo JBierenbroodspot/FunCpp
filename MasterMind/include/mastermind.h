@@ -16,7 +16,7 @@ private:
     const unsigned int amount_of_colours_;
 public:
     MasterMind();
-    MasterMind(unsigned int board_width, unsigned int game_length, unsigned int amount_of_colours);
+    MasterMind(unsigned int& board_width, unsigned int& game_length, unsigned int& amount_of_colours&);
 };
 
 } // namespace mastermind

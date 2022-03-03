@@ -14,7 +14,7 @@ board_width_(4),
 game_length_(10)
 {}
 
-MasterMind::MasterMind(unsigned int board_width, unsigned int game_length, unsigned int amount_of_colours) :
+MasterMind::MasterMind(unsigned int& board_width, unsigned int& game_length, unsigned int& amount_of_colours) :
 amount_of_colours_(amount_of_colours),
 board_width_(board_width),
 game_length_(game_length)
