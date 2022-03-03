@@ -7,6 +7,10 @@
 #ifndef FUNCPP_MASTERMIND_H
 #define FUNCPP_MASTERMIND_H
 
+#include <vector>
+
+#include "code.h"
+
 namespace mastermind {
 
 class MasterMind {
@@ -14,10 +18,12 @@ private:
     const unsigned int board_width_;
     const unsigned int game_length_;
     const unsigned int amount_of_colours_;
+    mastermind::Code secret_code_;
 public:
     MasterMind();
     // I honestly have no idea what I am doing by making these references... yet.
-    MasterMind(unsigned int& board_width, unsigned int& game_length, unsigned int& amount_of_colours);
+    MasterMind(const unsigned int& board_width, const unsigned int& game_length, const unsigned int& amount_of_colours);
+    [[nodiscard]] auto secret_code() const -> const mastermind::Code&;
 };
 
 } // namespace mastermind
