@@ -9,13 +9,15 @@
 
 namespace mastermind {
 
-Code::Code(unsigned int& code_length, unsigned int& possible_amount_of_values) {
+Code::Code(const unsigned int& code_length, const unsigned int& possible_amount_of_values) {
     for (unsigned int i = 0; i < code_length; i++) {
         this->values_.push_back(std::rand() % possible_amount_of_values); // NOLINT(cert-msc50-cpp)
     }
 }
 
-Code::Code(std::string &string_of_code, unsigned int &code_length, unsigned int &possible_amount_of_values) {
+Code::Code(std::string &string_of_code,
+           const unsigned int &code_length,
+           const unsigned int &possible_amount_of_values) {
     for (unsigned int i = 0; i < code_length; i++) {
         // I really hate this way of converting a char to integer. A char is one byte and by casting it to int you get
         // its ascii value. You subtract 48 because ascii numbers start at 48 so (int)'1' = 49 - 48 = 1.
