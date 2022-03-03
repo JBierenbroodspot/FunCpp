@@ -11,9 +11,9 @@ namespace mastermind {
 
 class MasterMind {
 private:
-    const unsigned int board_width;
-    const unsigned int game_length;
-    const unsigned int amount_of_colours;
+    const unsigned int board_width_;
+    const unsigned int game_length_;
+    const unsigned int amount_of_colours_;
 public:
     MasterMind();
     MasterMind(unsigned int board_width, unsigned int game_length, unsigned int amount_of_colours);

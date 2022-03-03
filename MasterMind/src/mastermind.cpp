@@ -9,15 +9,15 @@
 namespace mastermind {
 
 MasterMind::MasterMind() :
-amount_of_colours(6),
-board_width(4),
-game_length(10)
+amount_of_colours_(6),
+board_width_(4),
+game_length_(10)
 {}
 
 MasterMind::MasterMind(unsigned int board_width, unsigned int game_length, unsigned int amount_of_colours) :
-amount_of_colours(amount_of_colours),
-board_width(board_width),
-game_length(game_length)
+amount_of_colours_(amount_of_colours),
+board_width_(board_width),
+game_length_(game_length)
 {}
 
 } // namespace mastermind
