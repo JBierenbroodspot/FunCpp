@@ -23,7 +23,7 @@ public:
     MasterMind();
     // I honestly have no idea what I am doing by making these references... yet.
     MasterMind(const unsigned int& board_width, const unsigned int& game_length, const unsigned int& amount_of_colours);
-    [[nodiscard]] auto secret_code() const -> const mastermind::Code&;
+    std::vector<unsigned int> EvaluateGuess(const mastermind::Code& guess);
 };
 
 } // namespace mastermind
