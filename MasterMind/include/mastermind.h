@@ -29,7 +29,7 @@ public:
      * The default values are 4 for board width, 10 for game length and 6 for amount_of_colours.
      */
     MasterMind();
-    /** @brief
+    /** @brief Constructs a game of MasterMind with whatever values you supply.
      *
      * @param board_width an unsigned integer for the length of codes.
      * @param game_length an unsigned integer for the amount of rounds before user loses.
@@ -44,6 +44,12 @@ public:
      * the correct position and the right value is the amount of correct values in an incorrect position.
      */
     std::vector<unsigned int> EvaluateGuess(const mastermind::Code& guess);
+    /** @brief Checks whether the game is won or not.
+     *
+     * @param correctness This should be a vector with at most 2 values an preferably from the EvaluateGuess method.
+     * @return True if the all values are correct in the correct position, false if not.
+     */
+    [[nodiscard]] bool IsWon(std::vector<unsigned int> correctness) const;
 };
 
 } // namespace mastermind

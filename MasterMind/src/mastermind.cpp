@@ -73,4 +73,8 @@ std::vector<unsigned int> MasterMind::EvaluateGuess(const mastermind::Code& gues
     return std::vector<unsigned int> {correct_order, incorrect_order};
 }
 
+bool MasterMind::IsWon(std::vector<unsigned int> correctness) const {
+    return correctness.front() == this->game_length_;
+}
+
 } // namespace mastermind
