@@ -20,6 +20,12 @@ public:
     // representation of the coloured pins in the game MasterMind, e.g.: 0 = red, 1 = blue, 2 = orange, etc.
     Code(const unsigned int& code_length, const unsigned int& possible_amount_of_values);
     Code(std::string& string_of_code, const unsigned int& code_length, const unsigned int& possible_amount_of_values);
+    /** @brief Checks if a string consists of only numeric characters.
+     *
+     * @param code_string A string.
+     * @return True if every character in string is numeric, otherwise false.
+     */
+    static bool IsValidCode(const std::string& code_string, unsigned int code_length);
     // Super sexy way of making a getter. Since this method does not modify the value it can be declared const.
     // By removing the consts you make this a setter.
     // Source: @bolov at https://stackoverflow.com/a/51615364.

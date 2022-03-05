@@ -4,6 +4,7 @@
 // Created by aph09 on 03/03/2022.
 //
 #include <vector>
+#include <algorithm>
 
 #include "code.h"
 
@@ -23,6 +24,21 @@ Code::Code(std::string &string_of_code,
         // its ascii value. You subtract 48 because ascii numbers start at 48 so (int)'1' = 49 - 48 = 1.
         this->values_.push_back(static_cast<int>(string_of_code[i]) - 48);
     }
+}
+
+bool Code::IsValidCode(const std::string& code_string, unsigned int code_length) {
+    std::vector<bool> is_numeric;
+
+    if (code_string.length() != code_length) {
+        return false;
+    }
+
+    // added second if statement to prevent having to check this when it is not needed.
+    if (not std::all_of(code_string.begin(), code_string.end(), [](char character){return isdigit(character);})) {
+        return false;
+    }
+
+    return true;
 }
 
 auto Code::values() const -> const std::vector<unsigned int> & {
