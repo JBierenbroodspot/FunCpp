@@ -23,9 +23,11 @@ public:
     /** @brief Checks if a string consists of only numeric characters.
      *
      * @param code_string A string.
+     * @param code_length The amount of characters that needs to be in the string.
+     * @param possible_values The range each value in the string bust be in, e.g. 6 is a range from 0 to 5.
      * @return True if every character in string is numeric, otherwise false.
      */
-    static bool IsValidCode(const std::string& code_string, unsigned int code_length);
+    static bool IsValidCode(const std::string& code_string, const unsigned int& code_length, const unsigned int& possible_values);
     // Super sexy way of making a getter. Since this method does not modify the value it can be declared const.
     // By removing the consts you make this a setter.
     // Source: @bolov at https://stackoverflow.com/a/51615364.
