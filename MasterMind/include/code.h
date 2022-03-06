@@ -20,12 +20,13 @@ public:
     // representation of the coloured pins in the game MasterMind, e.g.: 0 = red, 1 = blue, 2 = orange, etc.
     Code(const unsigned int& code_length, const unsigned int& possible_amount_of_values);
     Code(std::string& string_of_code, const unsigned int& code_length, const unsigned int& possible_amount_of_values);
-    /** @brief Checks if a string consists of only numeric characters.
+    /** @brief Checks if a string consists of only numeric characters, has the correct length and is within the range of
+     * allowed values.
      *
      * @param code_string A string.
      * @param code_length The amount of characters that needs to be in the string.
      * @param possible_values The range each value in the string bust be in, e.g. 6 is a range from 0 to 5.
-     * @return True if every character in string is numeric, otherwise false.
+     * @return True if every character in string is numeric, the correct length and below possible_amount_of_values.
      */
     static bool IsValidCode(const std::string& code_string, const unsigned int& code_length, const unsigned int& possible_values);
     // Super sexy way of making a getter. Since this method does not modify the value it can be declared const.
