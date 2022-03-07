@@ -8,6 +8,7 @@
 #define FUNCPP_MASTERMIND_H
 
 #include <vector>
+#include <string>
 
 #include "code.h"
 
@@ -50,6 +51,11 @@ public:
      * @return True if the all values are correct in the correct position, false if not.
      */
     [[nodiscard]] bool IsWon(std::vector<unsigned int> correctness) const;
+    /** @brief Retrieves user input using std::cin and constructs a mastermind::Code object.
+     *
+     * @return A Code object using user_input.
+     */
+    mastermind::Code GetUserInput();
 };
 
 } // namespace mastermind

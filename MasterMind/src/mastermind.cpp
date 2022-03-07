@@ -4,6 +4,8 @@
 // Created by aph09 on 02/03/2022.
 //
 #include <unordered_map>
+#include <iostream>
+#include <string>
 
 #include "mastermind.h"
 #include "code.h"
@@ -75,6 +77,17 @@ std::vector<unsigned int> MasterMind::EvaluateGuess(const mastermind::Code& gues
 
 bool MasterMind::IsWon(std::vector<unsigned int> correctness) const {
     return correctness.front() == this->game_length_;
+}
+
+mastermind::Code MasterMind::GetUserInput() {
+    std::string user_input;
+
+    while (!mastermind::Code::IsValidCode(user_input, this->board_width_, this->amount_of_colours_)) {
+        std::cout << "Please enter a code:\n>> ";
+        std::getline(std::cin, user_input);
+    }
+
+    return {mastermind::Code(user_input, this->game_length_, this->amount_of_colours_)};
 }
 
 } // namespace mastermind
