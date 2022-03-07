@@ -30,7 +30,7 @@ Code::Code(std::string &string_of_code,
 bool Code::IsValidCode(const std::string& code_string,
                        const unsigned int& code_length,
                        const unsigned int& possible_values) {
-    return (code_string.length() != code_length or not std::all_of(
+    return (code_string.length() == code_length and std::all_of(
             code_string.begin(),code_string.end(),[&possible_values](const char& character){
                 return std::stoi(std::string(1, character)) < possible_values;
             }
