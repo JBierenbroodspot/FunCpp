@@ -16,9 +16,20 @@ class Code {
 private:
     std::vector<unsigned int> values_;
 public:
+    /** @brief Constructs a random code.
+     *
+     * @param code_length The amount of values in the code.
+     * @param possible_amount_of_values Maximum value for each code number is this number - 1.
+     */
     // possible_amount_of_values means the range of values that can be included in the code. This is a numeric
     // representation of the coloured pins in the game MasterMind, e.g.: 0 = red, 1 = blue, 2 = orange, etc.
     Code(const unsigned int& code_length, const unsigned int& possible_amount_of_values);
+    /** @brief Constructs a Code object by converting each character of a string to an integer.
+     *
+     * @param string_of_code A string containing numeric characters.
+     * @param code_length The expected length of a code.
+     * @param possible_amount_of_values Each numeric value has to be between 0 and this number.
+     */
     Code(std::string& string_of_code, const unsigned int& code_length, const unsigned int& possible_amount_of_values);
     /** @brief Checks if a string consists of only numeric characters, has the correct length and is within the range of
      * allowed values.
